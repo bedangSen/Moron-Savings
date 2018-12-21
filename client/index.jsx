@@ -6,3 +6,5 @@ import App from './app/App.jsx';
 require("./default.css");
 
 ReactDOM.render(<App />, document.getElementById('app'));
+
+console.log("This is a test!")
