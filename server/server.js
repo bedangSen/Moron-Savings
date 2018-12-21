@@ -41,5 +41,3 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = server;
-
-console.log("This is a test");
