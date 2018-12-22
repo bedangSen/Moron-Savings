@@ -23,13 +23,13 @@ var session = require('express-session');
 var express = require('express');
 var MongoStore = require('connect-mongo')(session);
 
-var Comment = require('../model/comments');
+var Comment = require('../model/Expense');
 
 // user set variables
-const mongoURL = process.env.MONGO_URL || 'localhost';
-const mongoUser = process.env.MONGO_USER || '';
-const mongoPass = process.env.MONGO_PASS || '';
-const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
+const mongoURL = process.env.MONGO_URL || 'portal-ssl744-47.bmix-dal-yp-6da31355-f102-4b05-89bd-53090456c848.3145995647.composedb.com:19004/compose';
+const mongoUser = process.env.MONGO_USER || 'admin';
+const mongoPass = process.env.MONGO_PASS || 'RWXWGONKFLPIISXP';
+const mongoDBName = process.env.MONGO_DB_NAME || 'Expense';
 
 module.exports = function(app){
 

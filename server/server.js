@@ -13,11 +13,14 @@ const express = require('express');
 const log4js = require('log4js');
 const localConfig = require('./config/local.json');
 const path = require('path');
+const mongoose = require('mongoose');
 
 const logger = log4js.getLogger(appName);
 logger.level = process.env.LOG_LEVEL || 'info'
 const app = express();
 const server = http.createServer(app);
+
+app.set('view engine', 'ejs');
 
 app.use(log4js.connectLogger(logger, { level: logger.level }));
 const serviceManager = require('./services/service-manager');
@@ -25,6 +28,7 @@ require('./services/index')(app);
 require('./routers/index')(app, server);
 
 // Add your code here
+
 
 const port = process.env.PORT || localConfig.port;
 server.listen(port, function(){

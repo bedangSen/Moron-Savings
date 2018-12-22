@@ -17,18 +17,32 @@
   under the License.
  */
 
-//model/comments.js
+// //model/comments.js
 
-'use strict'
+// 'use strict'
+
+// var mongoose = require('mongoose');
+// var Schema = mongoose.Schema;
+
+// var CommentsSchema = new Schema({
+//   author: String,
+//   text: String,
+//   twitter: String,
+//   imageURL: String
+// });
+
+// module.exports = mongoose.model('Comment', CommentsSchema);
+
+//models/Expense.js
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var CommentsSchema = new Schema({
-  author: String,
-  text: String,
-  twitter: String,
-  imageURL: String
+var expenseSchema = new Schema({
+  description: String,
+  amount: Number,
+  month: String,
+  year: Number
 });
 
-module.exports = mongoose.model('Comment', CommentsSchema);
+module.exports = mongoose.model('Expense', expenseSchema);
